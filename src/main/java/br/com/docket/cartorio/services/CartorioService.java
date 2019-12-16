@@ -24,7 +24,7 @@ public class CartorioService {
 		return cartorio.get();
 	}
 	
-	public List<Cartorio> findAllCartorio() {
+	public List<Cartorio> findAllCartorios() {
 		return cartorioRepository.findAll();
 	}
 	
