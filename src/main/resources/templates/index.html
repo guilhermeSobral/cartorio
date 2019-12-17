@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thy,eleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Página Principal</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="cartorio : ${cartorios}">
+					<td th:text="${cartorio.id}"></td>
+					<td th:text="${cartorio.nome}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>	
+		<a href="/cartorio/novo">Novo Cartorio</a>
+	</body>
+</html>

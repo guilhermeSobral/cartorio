@@ -14,9 +14,8 @@ public class Cartorio implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String nome;	
 	
-	@Deprecated
 	public Cartorio() {
 
 	}
@@ -32,5 +31,9 @@ public class Cartorio implements Serializable {
 
 	public String getNome() {
 		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 }

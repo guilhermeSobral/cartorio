@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thy,eleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro de Cartorio</title>
+	</head>
+	<body>
+		
+		
+		<form th:object="${cartorio}" action="/novo" method="post">
+			<label for="inputNome">Cartorio</label>
+			<input type="text" id="inputNome" th:field="*{nome}" placeholder="Informe o Cartorio"/>	
+			<button type="submit" >Salvar</button>	
+		</form>
+	</body>
+</html>
