@@ -1,0 +1,17 @@
+.container {
+	width: 500px;
+	height: 400px;
+	display: inline-block;
+	position: absolute;
+	padding: 25px;
+	top: calc(50% - 200px);
+    left: calc(50% - 250px);
+}
+
+.container a {
+	float: right;
+}
+
+#delete {
+	color: coral;
+}

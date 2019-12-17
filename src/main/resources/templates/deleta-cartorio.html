@@ -2,15 +2,27 @@
 <html xmlns:th="http://www.thy,eleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>Deletar Cartorio</title>
+		<title>Deletar Cartorio</title>		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link href="../static/default.css" th:href="@{/default.css}" rel="stylesheet">
+		<link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet">
 	</head>
-	<body>		
+	<body>
+	
+		<header>			
+			<div class="card">
+  				<div class="card-body">
+    				<h2>Excluir Dados</h2>
+  				</div>
+			</div>
+		</header>
+		
 		<form th:object="${cartorio}" action="/deletar" method="post">
 			<label for="id">Id:</label>
 			<input type="text" id="id" th:field="*{id}" readOnly="readonly"/>
 			<label for="inputNome">Cartorio:</label>
 			<input type="text" id="inputNome" th:field="*{nome}" readOnly="readonly"/>			
-			<button type="submit" >Deletar</button>	
+			<button class="btn btn-danger" type="submit" >Excluir</button>	
 		</form>
 		<a href="/">Cancelar</a>
 	</body>

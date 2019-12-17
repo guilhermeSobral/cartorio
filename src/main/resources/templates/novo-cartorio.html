@@ -2,13 +2,29 @@
 <html xmlns:th="http://www.thy,eleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>Cadastro de Cartorio</title>
+		<title>Cadastro de Cartorio</title>		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link href="../static/default.css" th:href="@{/default.css}" rel="stylesheet">
+		<link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet">
 	</head>
-	<body>		
-		<form th:object="${cartorio}" action="/cartorio/novo" method="post">
-			<label for="inputNome">Cartorio</label>
-			<input type="text" id="inputNome" th:field="*{nome}" placeholder="Informe o Cartorio"/>			
-			<button type="submit" >Salvar</button>	
-		</form>
+	<body>
+	
+		<header>
+			<div class="card">
+  				<div class="card-body">
+    				<h2>Cadastro de Cartorio</h2>
+  				</div>
+			</div>
+		</header>
+	
+		<div class="container">		
+			<form th:object="${cartorio}" action="/cartorio/novo" method="post">
+				<div class="form-group">
+					<label for="inputNome">Cartorio</label>
+					<input type="text" id="inputNome" class="form-group" th:field="*{nome}" placeholder="Informe o Cartorio"/>	
+				</div>						
+				<button type="submit" class="btn btn-secondary" >Salvar</button>	
+			</form>
+		</div>
 	</body>
 </html>
