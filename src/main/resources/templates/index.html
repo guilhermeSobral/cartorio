@@ -30,7 +30,7 @@
 					<tr th:each="cartorio : ${cartorios}">
 						<td th:text="${cartorio.id}"></td>
 						<td th:text="${cartorio.nome}"></td>					
-						<td> <a class="btn btn-link" th:href="@{/atualizar/{id}(id=${cartorio.id})}" >Editar</a> </td>
+						<td> <a class="btn btn-link" id="update" th:href="@{/atualizar/{id}(id=${cartorio.id})}" >Editar</a> </td>
 						<td> <a class="btn btn-link" id="delete" th:href="@{/deletar/{id}(id=${cartorio.id})}" >Excluir</a> </td>	
 					</tr>
 				</tbody>

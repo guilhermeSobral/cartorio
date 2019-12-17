@@ -12,6 +12,10 @@
 	float: right;
 }
 
+#update {
+	color: #6c757d;
+}
+
 #delete {
 	color: coral;
 }
