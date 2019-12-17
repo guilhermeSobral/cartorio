@@ -1,17 +1,13 @@
 .container {
-	width: 500px;
+	width: 350px;
 	height: 400px;
 	display: inline-block;
 	position: absolute;
-	padding: 50px 0;;
+	padding: 50px 0;
 	top: calc(50% - 200px);
-    left: calc(50% - 250px);
+    left: calc(50% - 175px);
 }
 
-.container a {
+.btn.btn-secondary {
 	float: right;
-}
-
-#delete {
-	color: coral;
 }

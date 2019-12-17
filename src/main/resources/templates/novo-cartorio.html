@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link href="../static/default.css" th:href="@{/default.css}" rel="stylesheet">
 		<link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet">
+		<link href="../static/novo-cartorio.css" th:href="@{/novo-cartorio.css}" rel="stylesheet">
 	</head>
 	<body>
 	
@@ -19,11 +20,13 @@
 	
 		<div class="container">		
 			<form th:object="${cartorio}" action="/cartorio/novo" method="post">
+							
 				<div class="form-group">
-					<label for="inputNome">Cartorio</label>
-					<input type="text" id="inputNome" class="form-group" th:field="*{nome}" placeholder="Informe o Cartorio"/>	
-				</div>						
-				<button type="submit" class="btn btn-secondary" >Salvar</button>	
+				    <label for="formGroupExampleInput">Nome do Cartorio</label>
+				    <input type="text" class="form-control" id="formGroupExampleInput" th:field="*{nome}" placeholder="Informe o Nome">
+  				</div>
+  				<button type="submit" class="btn btn-secondary" >Salvar</button>
+  				
 			</form>
 		</div>
 	</body>
