@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thy,eleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Deletar Cartorio</title>
+	</head>
+	<body>		
+		<form th:object="${cartorio}" action="/deletar" method="post">
+			<label for="id">Id:</label>
+			<input type="text" id="id" th:field="*{id}" readOnly="readonly"/>
+			<label for="inputNome">Cartorio:</label>
+			<input type="text" id="inputNome" th:field="*{nome}" readOnly="readonly"/>			
+			<button type="submit" >Deletar</button>	
+		</form>
+		<a href="/">Cancelar</a>
+	</body>
+</html>

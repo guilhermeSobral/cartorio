@@ -2,11 +2,13 @@
 <html xmlns:th="http://www.thy,eleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>Cadastro de Cartorio</title>
+		<title>Atualização de Cartorio</title>
 	</head>
 	<body>		
-		<form th:object="${cartorio}" action="/cartorio/novo" method="post">
-			<label for="inputNome">Cartorio</label>
+		<form th:object="${cartorio}" action="/atualiza" method="post">
+			<label for="id">Id:</label>
+			<input type="text" id="id" th:field="*{id}" readOnly="readonly"/>
+			<label for="inputNome">Cartorio:</label>
 			<input type="text" id="inputNome" th:field="*{nome}" placeholder="Informe o Cartorio"/>			
 			<button type="submit" >Salvar</button>	
 		</form>
