@@ -18,13 +18,22 @@
 			</div>
 		</header>
 		
-		<form th:object="${cartorio}" action="/deletar" method="post">
-			<label for="id">Id:</label>
-			<input type="text" id="id" th:field="*{id}" readOnly="readonly"/>
-			<label for="inputNome">Cartorio:</label>
-			<input type="text" id="inputNome" th:field="*{nome}" readOnly="readonly"/>			
-			<button class="btn btn-danger" type="submit" >Excluir</button>	
-		</form>
-		<a href="/">Cancelar</a>
+		<div class="container">
+		
+			<form th:object="${cartorio}" action="/deletar" method="post">
+				
+				<div class="form-group">
+					<label for="id">Id</label>
+					<input type="text" class="form-control" id="id" th:field="*{id}" readOnly="readonly" >
+	  			</div>
+	  				
+	  			<div class="form-group">  					
+					<label for="inputNome">Nome do Cartorio</label>
+					<input type="text" class="form-control" id="inputNome" th:field="*{nome}" readOnly="readonly" >
+	  			</div>			
+				<button class="btn btn-danger" type="submit" >Excluir</button>
+				<a href="/">Cancelar</a>	
+			</form>
+		</div>
 	</body>
 </html>
