@@ -16,6 +16,7 @@
 				<tr th:each="cartorio : ${cartorios}">
 					<td th:text="${cartorio.id}"></td>
 					<td th:text="${cartorio.nome}"></td>
+					<td> <a th:href="@{/deletar/{id}(id=${cartorio.id})}" >Excluir</a> </td>	
 				</tr>
 			</tbody>
 		</table>

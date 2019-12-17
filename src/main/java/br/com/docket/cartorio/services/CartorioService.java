@@ -28,7 +28,8 @@ public class CartorioService {
 		return cartorioRepository.findAll();
 	}
 	
-	public void updateCartorio(Cartorio cartorio) {
+	public void updateCartorio(Long idCartorio) {
+		Cartorio cartorio = cartorioRepository.findById(idCartorio).get();
 		cartorioRepository.save(cartorio);
 	}	
 	
